@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #141414;
+    color: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: none;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background: #fff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: #1c1c1c;
+}
+
+.movies {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.movie-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    min-width: 200px;
+    flex: 0 0 auto;
+}
+
+.movie-card img {
+    width: 100%;
+    height: auto;
+}
+
+.movie-card h3 {
+    padding: 10px;
+    margin: 0;
+    background: #333;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+    .nav-links li {
+        display: block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+.nav-links.open {
+    display: block;
+}
+
+.nav-links.open li {
+    display: block;
+}
